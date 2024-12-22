@@ -1,13 +1,8 @@
-version: '3.9'
-
+version: "3.8"
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: my-agenda-api:1.0.0
+  spring-boot-app:
+    build: .
     ports:
-      - "8080:8080"
+      - "3000:3000"
     environment:
-      SPRING_PROFILES_ACTIVE: dev
-    restart: always
+      - SPRING_PROFILES_ACTIVE=prod
